@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografia de Texto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class = "cabecalho">
+        <nav class = "cabecalho__menu">
+                <a class="cabecalho__menu__link" href="index.html">Home</a>
+                <a class="cabecalho__menu__link" href="portfolio.html">Portfolio</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Criptografia de Texto</h1>
+        <h3> Use apenas letras minusculas e sem acentos!</h3>
+        <textarea id="inputText" rows="4" cols="50" placeholder="Digite seu texto aqui..."></textarea><br>
+        <button onclick="criptografar()">Criptografar</button>
+        <button onclick="descriptografar()">Descriptografar</button><br><br>
+        <textarea id="outputText" rows="4" cols="50" readonly></textarea><br>
+        <button onclick="copiarTexto()">Copiar Texto</button>
+    </main>
+    <script>
+        function criptografar() {
+            let texto = document.getElementById("inputText").value;
+            let textoCriptografado = texto.replace(/e/g, "enter")
+                                          .replace(/i/g, "imes")
+                                          .replace(/a/g, "ai")
+                                          .replace(/o/g, "ober")
+                                          .replace(/u/g, "ufat");
+            document.getElementById("outputText").value = textoCriptografado;
+        }
+
+        function descriptografar() {
+            let texto = document.getElementById("inputText").value;
+            let textoDescriptografado = texto.replace(/enter/g, "e")
+                                             .replace(/imes/g, "i")
+                                             .replace(/ai/g, "a")
+                                             .replace(/ober/g, "o")
+                                             .replace(/ufat/g, "u");
+            document.getElementById("outputText").value = textoDescriptografado;
+        }
+
+        function copiarTexto() {
+            let textoCopiado = document.getElementById("outputText");
+            textoCopiado.select();
+            document.execCommand("copy");
+            alert("Texto copiado para a área de transferência!");
+        }
+    </script>
+        <footer class="rodape">
+            <p>Desenvolvido por Gabriel Garcia, desafio da Alura.</p>
+        </footer>
+</body>
+</html>
