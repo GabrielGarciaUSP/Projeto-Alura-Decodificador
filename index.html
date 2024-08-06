@@ -1,52 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <title>Criptografia de Texto</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header class="cabecalho">
-        <nav class="cabecalho__menu">
-            <a class="cabecalho__menu__link" href="index.html">Home</a>
-            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+    <header class = "cabecalho">
+        <nav class = "cabecalho__menu">
+                <a class="cabecalho__menu__link" href="index.html">Home</a>
+                <a class="cabecalho__menu__link" href="portfolio.html">Portfolio</a>
         </nav>
     </header>
-    <main class="apresentacao">
-        <section class="apresentacao__conteudo">
-            <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível<strong 
-            class="titulo-destaque">com um Front-end de qualidade!
-            </strong></h1>
-            <p class="apresentacao__conteudo__texto">Olá! Sou Joana Santos, desenvolvedora
-            Front-end com especialidade em React, HTML e
-            CSS. Ajudo pequenos negócios e designers a
-            colocarem em prática boas ideias. Vamos
-            conversar?</p>
-            <div class="apresentacao__links">
-                <h2 class="apresentacao__links__subtitulo">Acesse minhas redes</h2>
-                <a class="apresentacao__links__link" href="https://github.com/GabrielGarciaUSP">
-                    <img src="./assets/github.png">
-                    Github
-                </a>
-                <a class="apresentacao__links__link" href="https://www.linkedin.com/in/gabriel-garcia-80b393307/">
-                    <img src="./assets/linkedin.png">
-                    linkedin
-                </a>
-                <a class="apresentacao__links__link" href="https://www.instagram.com/gfly.garcia/">
-                    <img src="./assets/instagram.png">
-                    Instagram
-                </a>
-            </div>
-        </section>
-        <img src="./assets/imagem.png" alt="Foto do Gabriel Garcia">
+    <main>
+        <h1>Criptografia de Texto</h1>
+        <h3> Use apenas letras minusculas e sem acentos!</h3>
+        <textarea id="TextoEntrada" rows="4" cols="50" placeholder="Digite seu texto aqui..."></textarea><br>
+        <button onclick="criptografar()">Criptografar</button>
+        <button onclick="descriptografar()">Descriptografar</button><br><br>
+        <textarea id="TextoSaida" rows="4" cols="50" readonly></textarea><br>
+        <button onclick="copiarTexto()">Copiar Texto</button>
     </main>
-    <footer class="rodape">
-        <p>Desenvolvido por Gabriel Garcia, desafio da Alura.</p>
-    </footer>
+    <script src="javascript.js"></script>
+        <footer class="rodape">
+            <p>Desenvolvido por Gabriel Garcia, desafio da Alura.</p>
+        </footer>
 </body>
-
 </html>
